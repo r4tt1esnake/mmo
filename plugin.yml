@@ -1,0 +1,8 @@
+name: CCCMMO
+main: ca.bc.southridge.ccc.mmo.MMO
+version: 1.0
+api-version: 1.14
+commands:
+  maxbuff:
+    description: Maximally buffs you!
+    usage: /maxbuff
