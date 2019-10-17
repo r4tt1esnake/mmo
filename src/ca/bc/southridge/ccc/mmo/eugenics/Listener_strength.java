@@ -1,5 +1,9 @@
 package ca.bc.southridge.ccc.mmo.eugenics;
 
-public class Listener_strength {
+import org.bukkit.event.Listener;
+
+public class Listener_strength implements Listener {
+	
+	
 
 }
