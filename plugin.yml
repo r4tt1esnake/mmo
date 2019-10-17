@@ -6,3 +6,6 @@ commands:
   maxbuff:
     description: Maximally buffs you!
     usage: /maxbuff
+  maxdebuff:
+    description: Maximally debuffs you!
+    usage: /maxdebuff

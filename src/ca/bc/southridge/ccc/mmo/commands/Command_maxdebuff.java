@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Command_maxbuff implements CommandExecutor {
+public class Command_maxdebuff implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
@@ -17,8 +17,8 @@ public class Command_maxbuff implements CommandExecutor {
 		Player player = (Player) arg0;
 		double currHealth = player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue();
 		double currSpeed = player.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).getValue();
-		player.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(currHealth + currHealth / 2);
-		player.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(currSpeed + currSpeed / 2);
+		player.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(currHealth - currHealth / 2);
+		player.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(currSpeed - currSpeed / 2);
 		player.sendMessage(Double.toString(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue()));
 		player.sendMessage(Double.toString(player.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).getValue()));
 		return true;
